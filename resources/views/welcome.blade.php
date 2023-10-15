@@ -15,12 +15,25 @@
 </head>
 
 <body>
-  @foreach ($movies as $movie)
-  <div class="card-header">
-    <h1>{{ $movie->title }}</h1>
+  <div class="container">
+    <div class="row g-5">
+      @foreach($movies as $movie)
+      <div class="col-3">
+        <div class="card text-center h-100">
+          <div class="card-header">
+            <h4>{{ $movie->title }}</h4>
+          </div>
+          <div class="card-body">
+            <h6>Titolo originale: <span>{{ $movie->original_title }}</span> </h6>
+            <h6>Nazionalità: <span>{{ $movie->nationality }}</span> </h6>
+            <h6>data d'uscita: <span>{{ $movie->date }}</span> </h6>
+            <h6>Valutazione: <span>{{ $movie->vote }}</span> </h6>
+          </div>
+        </div> 
+      </div>
+      @endforeach
+    </div>
   </div>
-      
-  @endforeach
   
 </body>
 
