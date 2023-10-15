@@ -15,7 +15,13 @@
 </head>
 
 <body>
-  <h1>ciao!</h1>
+  @foreach ($movies as $movie)
+  <div class="card-header">
+    <h1>{{ $movie->title }}</h1>
+  </div>
+      
+  @endforeach
+  
 </body>
 
 </html>
